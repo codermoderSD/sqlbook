@@ -12,7 +12,6 @@ import type { Cell } from "../types/notebook";
 
 interface NotebookCellProps {
   cell: Cell;
-  index: number;
   onUpdate: (id: string, content: string) => void;
   onRun: (id: string) => void;
   onDelete: (id: string) => void;
@@ -22,7 +21,6 @@ interface NotebookCellProps {
 
 const NotebookCell = ({
   cell,
-  index,
   onUpdate,
   onRun,
   onDelete,

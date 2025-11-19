@@ -429,11 +429,10 @@ function App() {
                 </div>
               </div>
             ) : (
-              cells.map((cell, index) => (
+              cells.map((cell) => (
                 <NotebookCell
                   key={cell.id}
                   cell={cell}
-                  index={index}
                   onUpdate={updateCell}
                   onRun={runCell}
                   onDelete={deleteCell}

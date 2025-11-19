@@ -1,10 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import {
   IoCloudUploadOutline,
-  IoAddCircleOutline,
   IoCloudDownloadOutline,
-  IoCheckmarkCircle,
-  IoCloseCircle,
   IoTrashOutline,
 } from "react-icons/io5";
 import Papa from "papaparse";
@@ -29,7 +26,6 @@ export function DataPreview({ db, schema, onDataChange }: DataPreviewProps) {
     col: number;
   } | null>(null);
   const [editValue, setEditValue] = useState<string>("");
-  const [newRowData, setNewRowData] = useState<Record<string, string>>({});
   const fileInputRef = useRef<HTMLInputElement>(null);
 
   useEffect(() => {
